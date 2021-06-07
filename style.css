@@ -1,0 +1,137 @@
+:root {
+    --darkCyan: hsl(185, 75%, 39%);
+    --darkBlue: hsl(229, 23%, 23%);
+    --darkGrayishBlue: hsl(227, 10%, 46%);
+    --darkGray: hsl(0, 0%, 59%)
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--darkCyan);
+    color: var(--darkBlue);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.bgs>.bg__top {
+    position: absolute;
+    top: -500px;
+    left: -240px;
+}
+
+.bgs>.bg__bottom {
+    position: absolute;
+    bottom: -550px;
+    right: -240px;
+}
+
+
+.card>.cover>img {
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 99;
+    box-shadow: 0 8px 30px -6px rgba(0, 0, 0, 0.3);
+}
+
+.card>.profile {
+    position: relative;
+    padding-top: 30px;
+}
+
+.card>.profile>.profile__victor {
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    position: absolute;
+    top: -75px;
+    left: 125px;
+}
+
+.card>.profile>.profile__data>h3 {
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+.card>.profile>.profile__data>h3>span {
+    color: var(--darkGrayishBlue);
+    margin-left: 5px;
+}
+
+.card>.profile>.profile__data>p {
+    color: var(--darkGray);
+    margin: 16px 0 30px;
+}
+
+.card>.profile>.profile__stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px #E7E7E7;
+    padding: 20px 50px;
+}
+
+.card>.profile>.profile__stats>.stat>h2 {
+    font-size: 18px;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+.card>.profile>.profile__stats>.stat>p {
+    margin: 0;
+    color: var(--darkGray);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 1024px) {
+    .bgs>.bg__top {
+        top: -480px;
+        left: -580px;
+    }
+
+    .bgs>.bg__bottom {
+        bottom: -700px;
+        right: -420px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .bgs>.bg__top {
+        top: -300px;
+        left: -400px;
+    }
+
+    .bgs>.bg__top>img {
+        width: 650px;
+        height: 650px;
+    }
+
+    .bgs>.bg__bottom {
+        bottom: -290px;
+        right: -400px;
+    }
+
+    .bgs>.bg__bottom>img {
+        width: 650px;
+        height: 650px;
+    }
+}
